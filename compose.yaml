@@ -1,0 +1,10 @@
+services:
+  fastapi:
+    restart: always
+    build:
+      context: ./fastapi
+      dockerfile: Dockerfile
+    ports:
+      - mode: ingress
+        target: 8000
+        published: 8000
